@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Customizable parameters
 FONT_NAME="JetBrains-Mono-Regular"
 VERTICAL_OFFSET_PERCENT=83
-FONT_SIZES=(14 16 18 28 30 32 34 44 46)
+FONT_SIZES=(10 14 16 24 32)
 
 # Check if ImageMagick and the font are installed
 if ! command -v convert &> /dev/null; then
