@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # Customizable parameters
-FONT_NAME="JetBrains-Mono-Regular"
-VERTICAL_OFFSET_PERCENT=83
-FONT_SIZES=(10 12 14 20 28)
+FONT_NAME="Comic-Shanns-Regular"
+VERTICAL_OFFSET_PERCENT=96
+IMAGE_HEIGHT_PERCENT=128
+FONT_SIZES=(12 14 16 24 32)
 
 # Check if ImageMagick and the font are installed
 if ! command -v convert &> /dev/null; then
@@ -18,11 +19,12 @@ fi
 mkdir -p "fonts"
 
 # ASCII characters
-CHARS='  !"$%&\()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
+CHARS='  !"$%&\()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[/]^_`abcdefghijklmnopqrstuvwxyz{|}~'
 
 # Generate an image for each font size
 for FONT_SIZE in "${FONT_SIZES[@]}"; do
     HEIGHT="$FONT_SIZE"
+    IMAGE_HEIGHT=$((HEIGHT * IMAGE_HEIGHT_PERCENT / 100))
     OUTPUT_PNG="fonts/font-$FONT_SIZE.png"
 
     # Compute character and image dimensions
@@ -41,7 +43,7 @@ for FONT_SIZE in "${FONT_SIZES[@]}"; do
     done
 
     # Execute the commands
-    if ! convert -size "${WIDTH}x${HEIGHT}" xc:transparent "${convert_commands[@]}" "$OUTPUT_PNG"; then
+    if ! convert -size "${WIDTH}x${IMAGE_HEIGHT}" xc:transparent "${convert_commands[@]}" "$OUTPUT_PNG"; then
         echo "Error creating image for font size $FONT_SIZE"
         exit 1
     fi

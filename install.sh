@@ -17,23 +17,23 @@ read choice
 case "$choice" in
   1)
     ICON_SIZE="128-25"
-    FONT_SIZE="10"
+    FONT_SIZE="12"
     ;;
   2)
     ICON_SIZE="192-38"
-    FONT_SIZE="12"
+    FONT_SIZE="14"
     ;;
   3)
     ICON_SIZE="256-51"
-    FONT_SIZE="14"
+    FONT_SIZE="16"
     ;;
   4)
     ICON_SIZE="384-76"
-    FONT_SIZE="20"
+    FONT_SIZE="24"
     ;;
   5)
     ICON_SIZE="512-102"
-    FONT_SIZE="28"
+    FONT_SIZE="32"
     ;;
   *)
     echo "Invalid choice. Please choose a number between 1 and 5."
