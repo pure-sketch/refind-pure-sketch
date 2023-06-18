@@ -30,7 +30,7 @@
      showguides="true"
      inkscape:lockguides="false"
      inkscape:zoom="1"
-     inkscape:cx="200"
+     inkscape:cx="187"
      inkscape:cy="232"
      inkscape:window-width="1920"
      inkscape:window-height="1007"
@@ -80,12 +80,12 @@
          style="stop-color:#8cd2f2;stop-opacity:1;"
          offset="0"
          id="stop30937" /></linearGradient></defs><circle
-     style="display:inline;opacity:1;fill:#ffe3b8;fill-opacity:1;fill-rule:evenodd;stroke:#ffc66d;stroke-width:8.46666656;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     style="display:inline;opacity:1;fill:#ffe3b8;fill-opacity:1;fill-rule:evenodd;stroke:#ffc66d;stroke-width:10.5833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
      id="path8457"
      cx="67.733337"
      cy="67.73333"
      inkscape:label="main_shape"
-     r="62.970833" /><circle
+     r="61.912498" /><circle
      style="display:inline;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:10.5833332;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
      id="circle10067"
      inkscape:label="inner_circle"
