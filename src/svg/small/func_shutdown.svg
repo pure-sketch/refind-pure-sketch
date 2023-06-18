@@ -30,7 +30,7 @@
      showguides="true"
      inkscape:lockguides="false"
      inkscape:zoom="1.28"
-     inkscape:cx="165.625"
+     inkscape:cx="166.79688"
      inkscape:cy="227.34375"
      inkscape:window-width="1920"
      inkscape:window-height="1007"
@@ -68,13 +68,13 @@
          style="stop-color:#8cd2f2;stop-opacity:1;"
          offset="0"
          id="stop30937" /></linearGradient></defs><circle
-     style="display:inline;opacity:1;fill:#e9aaaa;fill-opacity:1;fill-rule:evenodd;stroke:#d25252;stroke-width:4.23333328;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     style="display:inline;opacity:1;fill:#e9aaaa;fill-opacity:1;fill-rule:evenodd;stroke:#d25252;stroke-width:10.5833332;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
      id="path8457"
      cx="67.733337"
      cy="67.73333"
-     r="65.087502"
-     inkscape:label="main_shape" /><path
-     style="display:inline;opacity:1;fill:#e9aaaa;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:8.46667;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:label="main_shape"
+     r="61.912498" /><path
+     style="display:inline;opacity:1;fill:#e9aaaa;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:10.5833332;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
      id="circle10067"
      inkscape:label="inner_circle"
      sodipodi:type="arc"
@@ -87,8 +87,8 @@
      sodipodi:arc-type="arc"
      d="M 84.005214,39.549616 A 32.543751,32.543751 0 0 1 99.168186,76.156273 32.543751,32.543751 0 0 1 67.733337,100.27708 32.543751,32.543751 0 0 1 36.298488,76.156272 32.543751,32.543751 0 0 1 51.461462,39.549615"
      sodipodi:open="true" /><path
-     style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:8.46667;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 67.733332,25.4 V 50.799999"
+     style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:10.5833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 67.733332,33.866666 V 50.799999"
      id="path12071"
      sodipodi:nodetypes="cc"
      inkscape:label="|" /></svg>

@@ -3,7 +3,7 @@
 # Customizable parameters
 FONT_NAME="JetBrains-Mono-Regular"
 VERTICAL_OFFSET_PERCENT=83
-FONT_SIZES=(10 14 16 24 32)
+FONT_SIZES=(10 12 14 20 28)
 
 # Check if ImageMagick and the font are installed
 if ! command -v convert &> /dev/null; then

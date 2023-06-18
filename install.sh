@@ -1,34 +1,39 @@
 #!/bin/bash
 
+if [ $EUID != 0 ]; then
+    sudo "$0" "$@"
+    exit $?
+fi
+
 echo "Select theme size:"
-echo "1. Very small"
-echo "2. Small"
-echo "3. Medium (Recommended for 1920x1080)"
-echo "4. Large"
-echo "5. Very large"
+echo "1. Very small 128-25"
+echo "2. Small 192-38"
+echo "3. Medium 256-51 (Recommended for 1920x1080)"
+echo "4. Large 384-76"
+echo "5. Very large 512-102"
 echo "Enter your choice (1-5): "
 read choice
 
 case "$choice" in
   1)
-    ICON_SIZE="128-32"
+    ICON_SIZE="128-25"
     FONT_SIZE="10"
     ;;
   2)
-    ICON_SIZE="192-48"
-    FONT_SIZE="14"
+    ICON_SIZE="192-38"
+    FONT_SIZE="12"
     ;;
   3)
-    ICON_SIZE="256-64"
-    FONT_SIZE="16"
+    ICON_SIZE="256-51"
+    FONT_SIZE="14"
     ;;
   4)
-    ICON_SIZE="384-96"
-    FONT_SIZE="24"
+    ICON_SIZE="384-76"
+    FONT_SIZE="20"
     ;;
   5)
-    ICON_SIZE="512-128"
-    FONT_SIZE="32"
+    ICON_SIZE="512-102"
+    FONT_SIZE="28"
     ;;
   *)
     echo "Invalid choice. Please choose a number between 1 and 5."

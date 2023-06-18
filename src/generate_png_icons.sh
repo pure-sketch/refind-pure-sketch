@@ -11,6 +11,7 @@ TARGET_DIR="./icons"
 
 # Array of sizes for the PNG images
 SIZES=(128 192 256 384 512)
+SMALL_DIVISOR=5
 
 # Check for the presence of the rsvg-convert command (part of librsvg)
 if ! command -v rsvg-convert &>/dev/null; then
@@ -30,7 +31,7 @@ process_files() {
     # Create PNG images of different sizes
     for size in "${SIZES[@]}"; do
       local new_size=$((size/size_divisor))
-      local output_dir="$TARGET_DIR/$size-$((size/4))"
+      local output_dir="$TARGET_DIR/$size-$((size/$SMALL_DIVISOR))"
       local output_file="$output_dir/$basename.png"
 
       # Create the output directory if it does not exist
@@ -48,6 +49,6 @@ process_files() {
 # Convert SVG files from both the "big" and "small" directories
 for dir in "${!SVG_DIRS[@]}"; do
   divisor=1
-  [[ $dir == "small" ]] && divisor=4
+  [[ $dir == "small" ]] && divisor=$SMALL_DIVISOR
   process_files "${SVG_DIRS[$dir]}" "$divisor"
 done
