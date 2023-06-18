@@ -23,7 +23,7 @@ CHARS='  !"$%&\()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefgh
 # Generate an image for each font size
 for FONT_SIZE in "${FONT_SIZES[@]}"; do
     HEIGHT="$FONT_SIZE"
-    OUTPUT_PNG="fonts/${FONT_NAME,,}-$FONT_SIZE.png"
+    OUTPUT_PNG="fonts/font-$FONT_SIZE.png"
 
     # Compute character and image dimensions
     CHAR_WIDTH=$((HEIGHT * 60 / 100))

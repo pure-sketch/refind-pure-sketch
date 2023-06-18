@@ -31,8 +31,8 @@
      showguides="true"
      inkscape:lockguides="false"
      inkscape:zoom="1.28"
-     inkscape:cx="168.75"
-     inkscape:cy="232.81249"
+     inkscape:cx="169.92188"
+     inkscape:cy="232.8125"
      inkscape:window-width="1920"
      inkscape:window-height="1007"
      inkscape:window-x="1920"
@@ -81,4 +81,10 @@
        y="2.6458333"
        inkscape:label="base"
        style="display:none;opacity:1;stroke-width:1.00012;stroke-dasharray:none"
-       sodipodi:insensitive="true" /></g></svg>
+       sodipodi:insensitive="true" /><rect
+       style="fill:#eeeeec;fill-rule:evenodd;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
+       id="rect238"
+       width="135.46666"
+       height="135.46666"
+       x="0"
+       y="0" /></g></svg>

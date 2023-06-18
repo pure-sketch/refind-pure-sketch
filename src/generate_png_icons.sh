@@ -12,9 +12,9 @@ TARGET_DIR="./icons"
 # Array of sizes for the PNG images
 SIZES=(128 192 256 384 512)
 
-# Check for the presence of the convert command (part of ImageMagick)
-if ! command -v convert &>/dev/null; then
-  echo "ImageMagick is not installed. Please install it before running this script."
+# Check for the presence of the rsvg-convert command (part of librsvg)
+if ! command -v rsvg-convert &>/dev/null; then
+  echo "librsvg is not installed. Please install it before running this script."
   exit 1
 fi
 
@@ -37,7 +37,7 @@ process_files() {
       mkdir -p "$output_dir"
 
       # Convert the SVG file to a PNG image
-      if ! convert -background none -resize "${new_size}x${new_size}" "$svg_file" "$output_file"; then
+      if ! rsvg-convert -w "$new_size" -h "$new_size" "$svg_file" -o "$output_file"; then
         echo "An error occurred while converting $svg_file to $output_file"
         exit 1
       fi
