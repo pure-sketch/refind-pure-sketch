@@ -6,6 +6,10 @@ rEFInd Pure Sketch is a custom theme for the rEFInd UEFI boot manager. The theme
 
 ![My Configuration](my_configuration.png)
 
+Alternative configuration:
+
+![Alternative Configuration](alternative_configuration.png)
+
 ## Installation
 
 1. Ensure that you have the rEFInd boot manager installed on your system.
