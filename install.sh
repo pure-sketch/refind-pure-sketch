@@ -82,7 +82,11 @@ EOF
 
 cp theme.conf "$THEME_DIR"
 
-# Adding line to refind.conf
+# Removing line if it already exists in refind.conf
+sudo sed -i '/include themes\/refind-pure-sketch\/theme.conf/d' /boot/efi/EFI/refind/refind.conf
+
+# Adding line to the end of refind.conf
 echo "include themes/refind-pure-sketch/theme.conf" | sudo tee -a /boot/efi/EFI/refind/refind.conf > /dev/null
+echo "Theme added to refind.conf"
 
 echo "Theme installed successfully!"
