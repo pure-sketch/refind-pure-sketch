@@ -49,6 +49,7 @@ If you encounter any problems during the installation, please check the followin
 
 - The [rEFInd's developer](http://www.rodsbooks.com/refind/) for developing and maintaining the rEFInd boot manager.
 - The creators and contributors of the [rEFInd Regular Theme](https://github.com/bobafetthotmail/refind-theme-regular) for providing inspiration in developing rEFInd Pure Sketch
+- [shannpersand](https://github.com/shannpersand), the creator of the [Comic Shanns](https://github.com/shannpersand/comic-shanns), for the font used in this theme.
 
 ## Contact
 
