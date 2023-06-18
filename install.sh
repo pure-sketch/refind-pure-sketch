@@ -6,11 +6,11 @@ if [ $EUID != 0 ]; then
 fi
 
 echo "Select theme size:"
-echo "1. Very small 128-25"
-echo "2. Small 192-38"
-echo "3. Medium 256-51 (Recommended for 1920x1080)"
-echo "4. Large 384-76"
-echo "5. Very large 512-102"
+echo "1. Very small 128-25px"
+echo "2. Small 192-38px"
+echo "3. Medium 256-51px (Recommended for 1920x1080)"
+echo "4. Large 384-76px"
+echo "5. Very large 512-102px"
 echo "Enter your choice (1-5): "
 read choice
 
