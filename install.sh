@@ -5,6 +5,12 @@ if [ $EUID != 0 ]; then
     exit $?
 fi
 
+echo "Select theme color:"
+echo "1. Light"
+echo "2. Dark"
+echo "Enter your choice (1-2): "
+read theme_choice
+
 echo "Select theme size:"
 echo "1. Very small 128-25px"
 echo "2. Small 192-38px"
@@ -12,9 +18,9 @@ echo "3. Medium 256-51px (Recommended for 1920x1080)"
 echo "4. Large 384-76px"
 echo "5. Very large 512-102px"
 echo "Enter your choice (1-5): "
-read choice
+read size_choice
 
-case "$choice" in
+case "$size_choice" in
   1)
     ICON_SIZE="128-25"
     FONT_SIZE="12"
@@ -44,6 +50,7 @@ esac
 THEME_DIR="/boot/efi/EFI/refind/themes/refind-pure-sketch"
 ICON_DIR="$THEME_DIR/icons/${ICON_SIZE}"
 FONT_DIR="$THEME_DIR/fonts"
+FONT_SUFFIX=""
 
 if [ ! -d "/boot/efi/EFI/refind" ]; then
   echo "/boot/efi/EFI/refind does not exist. Please make sure refind is installed."
@@ -56,8 +63,18 @@ fi
 
 mkdir -p "$ICON_DIR"
 mkdir -p "$FONT_DIR"
-cp icons/${ICON_SIZE}/* "$ICON_DIR"
-cp fonts/font-${FONT_SIZE}.png "$FONT_DIR"
+
+if [[ "$theme_choice" -eq 2 ]]; then
+  cp src/icons/${ICON_SIZE}/*_dark.png "$ICON_DIR"
+  for dark_icon in "$ICON_DIR"/*_dark.png; do
+    mv "$dark_icon" "${dark_icon%_dark.png}.png"
+  done
+  FONT_SUFFIX="_dark"
+else
+  cp src/icons/${ICON_SIZE}/*[!_dark].png "$ICON_DIR"
+fi
+
+cp src/fonts/font_${FONT_SIZE}${FONT_SUFFIX}.png "$FONT_DIR"/font_${FONT_SIZE}.png
 
 cat > theme.conf <<EOF
 # Theme by Zalimannard
@@ -73,11 +90,11 @@ small_icon_size ${ICON_SIZE##*-}
 banner themes/refind-pure-sketch/icons/${ICON_SIZE}/bg.png
 
 # SELECTION IMAGE
-selection_big themes/refind-pure-sketch/icons/${ICON_SIZE}/selection-big.png
-selection_small themes/refind-pure-sketch/icons/${ICON_SIZE}/selection-small.png
+selection_big themes/refind-pure-sketch/icons/${ICON_SIZE}/selection_big.png
+selection_small themes/refind-pure-sketch/icons/${ICON_SIZE}/selection_small.png
 
 # FONT
-font themes/refind-pure-sketch/fonts/font-${FONT_SIZE}.png
+font themes/refind-pure-sketch/fonts/font_${FONT_SIZE}.png
 EOF
 
 cp theme.conf "$THEME_DIR"
