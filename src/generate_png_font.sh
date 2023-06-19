@@ -39,7 +39,7 @@ for FONT_SIZE in "${FONT_SIZES[@]}"; do
         X_POS=$((i * CHAR_WIDTH))
         Y_OFFSET=$((FONT_SIZE * VERTICAL_OFFSET_PERCENT / 100))
         CHAR=${CHARS:$i:1}
-        convert_commands+=("-font" "$FONT_NAME" "-pointsize" "$FONT_SIZE" "-draw" "text $X_POS,$Y_OFFSET '$CHAR'")
+        convert_commands+=("-fill" "#616063" "-font" "$FONT_NAME" "-pointsize" "$FONT_SIZE" "-draw" "text $X_POS,$Y_OFFSET '$CHAR'")
     done
 
     # Execute the commands
