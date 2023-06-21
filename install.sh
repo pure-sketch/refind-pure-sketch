@@ -65,16 +65,16 @@ mkdir -p "$ICON_DIR"
 mkdir -p "$FONT_DIR"
 
 if [[ "$theme_choice" -eq 2 ]]; then
-  cp src/icons/${ICON_SIZE}/*_dark.png "$ICON_DIR"
+  cp icons/${ICON_SIZE}/*_dark.png "$ICON_DIR"
   for dark_icon in "$ICON_DIR"/*_dark.png; do
     mv "$dark_icon" "${dark_icon%_dark.png}.png"
   done
   FONT_SUFFIX="_dark"
 else
-  cp src/icons/${ICON_SIZE}/*[!_dark].png "$ICON_DIR"
+  cp icons/${ICON_SIZE}/*[!_dark].png "$ICON_DIR"
 fi
 
-cp src/fonts/font_${FONT_SIZE}${FONT_SUFFIX}.png "$FONT_DIR"/font_${FONT_SIZE}.png
+cp fonts/font_${FONT_SIZE}${FONT_SUFFIX}.png "$FONT_DIR"/font_${FONT_SIZE}.png
 
 cat > theme.conf <<EOF
 # Theme by Zalimannard
